@@ -17,6 +17,12 @@ RUN curl -sS https://getcomposer.org/installer | php \
 
 RUN composer install --no-dev --optimize-autoloader
 
+RUN cp .env.example .env
+
+RUN php artisan key:generate
+
+RUN chmod -R 775 storage bootstrap/cache
+
 RUN chown -R www-data:www-data /var/www/html
 
 EXPOSE 80
