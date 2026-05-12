@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Custom Styles */
+@layer utilities {
+    .glass-effect {
+        @apply bg-white/10 backdrop-blur-md border border-white/20;
+    }
+}
